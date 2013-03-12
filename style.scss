@@ -1,0 +1,76 @@
+$top: 300px;
+$tile: 40px;
+$row: 80px;
+$ab: absolute;
+
+#main {
+  background-color: #bcd5fe;
+  padding: 20px 20px 20px 20px; }
+
+.container {
+  position: relative;
+  float: left;
+  top: 0; }
+
+img {
+  position: relative;
+  top: $top;
+  left: 0; }
+  
+
+.b1{
+  position: $ab;
+  top: $top - 3*$row;
+}
+
+.nd1{
+  position: $ab;
+  top: $top - 3*$row - $tile;
+}
+
+.b2 {
+  position: $ab;
+  top: $top - 2*$row;
+}
+
+.nd {
+  position: $ab; 
+  top: $top - $tile; 
+}
+
+.rd { 
+  position: $ab; 
+  top: $top - 2*$tile; 
+}
+
+
+.b3 {
+  position: $ab; 
+  top: $top + $tile; 
+}
+
+.b4 {
+  position: $ab;
+  top: $top + $row + 2*$tile;
+}
+
+.nd4 {
+  position: $ab; 
+  top: $top + $row + $tile; 
+}
+
+
+.tree {
+  position: $ab;
+  top: 110;
+}
+
+.gem {
+  width: 50px;
+  height: auto;
+}
+
+.character {
+  position: $ab;
+  top: 200px;
+}
