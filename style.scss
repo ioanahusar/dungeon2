@@ -1,7 +1,11 @@
 $top: 300px;
 $tile: 40px;
 $row: 80px;
-$ab: absolute;
+
+@mixin ab($dist) {
+  position: absolute;
+  top: $dist;
+}
 
 #main {
   background-color: #bcd5fe;
@@ -17,60 +21,46 @@ img {
   top: $top;
   left: 0; }
   
-
-.b1{
-  position: $ab;
-  top: $top - 3*$row;
+.b1 {
+  @include ab($top - 3*$row)
 }
 
-.nd1{
-  position: $ab;
-  top: $top - 3*$row - $tile;
+.nd1 {
+  @include ab($top - 3*$row - $tile)
 }
 
 .b2 {
-  position: $ab;
-  top: $top - 2*$row;
+  @include ab($top - 2*$row)
 }
 
 .nd {
-  position: $ab; 
-  top: $top - $tile; 
+  @include ab($top - $tile)
 }
 
-.rd { 
-  position: $ab; 
-  top: $top - 2*$tile; 
+.rd {
+  @include ab($top - 2*$tile)
 }
-
-
 .b3 {
-  position: $ab; 
-  top: $top + $tile; 
+  @include ab($top + $tile)
 }
 
 .b4 {
-  position: $ab;
-  top: $top + $row + 2*$tile;
+  @include ab($top + $row + 2*$tile)
 }
 
 .nd4 {
-  position: $ab; 
-  top: $top + $row + $tile; 
+  @include ab($top + $row + $tile)
 }
 
-
 .tree {
-  position: $ab;
-  top: 110;
+  @include ab(110px)
+}
+
+.character {
+  @include ab(200px)
 }
 
 .gem {
   width: 50px;
   height: auto;
-}
-
-.character {
-  position: $ab;
-  top: 200px;
 }
